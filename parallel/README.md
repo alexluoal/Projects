@@ -34,9 +34,9 @@
 - Time complexity: O(log blockDim.x)
 - __synthreads() to ensure data isn’t pulled before it’s properly updated.
 
-  	if (sumsIdx == 0) {
-  		res[blockIdx.x] = sums[0];
-  	}
+	if (sumsIdx == 0) {
+		res[blockIdx.x] = sums[0];
+	}
 
 - Each block’s shared memory’s array’s 0th element gets the block’s partial dot product.
 - These values are passed to the host for the CPU to do the final summation
